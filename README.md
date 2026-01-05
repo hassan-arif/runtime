@@ -8,12 +8,15 @@ Runtime is an Event Management Platform built with Next.js.
 # Development Highlights
 
 - Create homepage UI. Add light rays, hero section, and featured events (using mock data).
+- Integrate Posthog for analytics and MongoDB for data storage.
 
 # Tech Stack
 
 - Next.js 16
 - Tailwind CSS
 - React Bits -> Light Rays
+- Posthog
+- MongoDB
 
 ## Getting Started
 

@@ -1,0 +1,32 @@
+[
+  {
+    "event_name": "explore_events_clicked",
+    "event_description": "User clicks the Explore Events button to view event listings",
+    "file_path": "/Users/hassan/Documents/runtime/components/ExploreBtn.tsx"
+  },
+  {
+    "event_name": "event_card_clicked",
+    "event_description": "User clicks on an event card to view event details",
+    "file_path": "/Users/hassan/Documents/runtime/components/EventCard.tsx"
+  },
+  {
+    "event_name": "navbar_logo_clicked",
+    "event_description": "User clicks on the Runtime logo in the navigation bar",
+    "file_path": "/Users/hassan/Documents/runtime/components/NavBar.tsx"
+  },
+  {
+    "event_name": "navbar_home_clicked",
+    "event_description": "User clicks on Home link in the navigation bar",
+    "file_path": "/Users/hassan/Documents/runtime/components/NavBar.tsx"
+  },
+  {
+    "event_name": "navbar_events_clicked",
+    "event_description": "User clicks on Events link in the navigation bar",
+    "file_path": "/Users/hassan/Documents/runtime/components/NavBar.tsx"
+  },
+  {
+    "event_name": "navbar_create_event_clicked",
+    "event_description": "User clicks on Create Event link in the navigation bar",
+    "file_path": "/Users/hassan/Documents/runtime/components/NavBar.tsx"
+  }
+]
