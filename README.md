@@ -8,11 +8,14 @@ Runtime is an Event Management Platform built with Next.js, TypeScript, MongoDB,
 # Development Highlights
 
 - Create homepage UI. Add light rays, hero section, and featured events (using mock data).
-- Integrate Posthog for analytics and MongoDB for data storage.
+- Integrate Posthog for analytics (track bookings and user interactions) and MongoDB for data storage.
 - Designed the data model from real-world behavior first, then implemented it cleanly with MongoDB, Mongoose, and TypeScript. Set up a cached database connection that survives Next.js server lifecycles instead of reconnecting like an amateur.
 - Built production-grade API routes for creating, fetching, and querying events by slug, including validation and error handling.
 - Integrated Cloudinary to handle real file uploads instead of pretending URLs are uploads.
 - Consumed those APIs from server components, using environment-aware base URLs and dynamic routing to render event lists and details.
+- Implemented event details page with dynamic data fetching from an API, including tags, agenda, and organizer info, along with a booking form.
+- Introduced Server actions to fetch similar events efficiently without API boilerplate.
+- Enabled Caching via Next.js 16’s use cache and cache tag features to speed up runtime data fetching and control stale data.
 
 # Tech Stack
 
