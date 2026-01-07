@@ -1,42 +1,87 @@
 <p align="center">
-  <img src="public/icons/icon.png" alt="Runtime Logo" width="200px"/>
-  <h1>Runtime</h1>
+  <img src="public/icons/icon.png" alt="Runtime Logo" width="120px"/>
+  <h1 align="center">Runtime</h1>
 </p>
 
-Runtime is an Event Management Platform built with Next.js, TypeScript, MongoDB, and Cloudinary.
+<p align="center">
+  <img src="https://img.shields.io/github/stars/hassan-arif/runtime?style=social" />
+  <img src="https://img.shields.io/badge/Stack-Next.js%2016-black" />
+  <img src="https://img.shields.io/badge/Database-MongoDB-green" />
+  <img src="https://img.shields.io/badge/Images-Cloudinary-blue" />
+  <img src="https://img.shields.io/badge/Analytics-Posthog-orange" />
+  <img src="https://img.shields.io/badge/Styles-Tailwind%20CSS-blueviolet" />
+</p>
 
-# Development Highlights
+Runtime is an event management platform built with Next.js 16, TypeScript, and MongoDB for managing and discovering tech events.
 
-- Create homepage UI. Add light rays, hero section, and featured events (using mock data).
-- Integrate Posthog for analytics (track bookings and user interactions) and MongoDB for data storage.
-- Designed the data model from real-world behavior first, then implemented it cleanly with MongoDB, Mongoose, and TypeScript. Set up a cached database connection that survives Next.js server lifecycles instead of reconnecting like an amateur.
-- Built production-grade API routes for creating, fetching, and querying events by slug, including validation and error handling.
-- Integrated Cloudinary to handle real file uploads instead of pretending URLs are uploads.
-- Consumed those APIs from server components, using environment-aware base URLs and dynamic routing to render event lists and details.
-- Implemented event details page with dynamic data fetching from an API, including tags, agenda, and organizer info, along with a booking form.
-- Introduced Server actions to fetch similar events efficiently without API boilerplate.
-- Enabled Caching via Next.js 16’s use cache and cache tag features to speed up runtime data fetching and control stale data.
+## Demo
 
-# Tech Stack
+<p align="center">
+  <img src="docs/demo.gif" alt="Runtime Demo" width="100%"/>
+</p>
 
-- Next.js 16
-- Tailwind CSS
-- React Bits -> Light Rays
-- Posthog
-- MongoDB
-- Cloudinary -> Image Upload
+> [!NOTE]
+> Check out the live version at [runtime-pi.vercel.app](https://runtime-pi.vercel.app/)
+
+## Features
+
+- **Event Discovery**: View featured and upcoming events fetched from the database.
+- **Event Details**: Dedicated page for agendas, tags, and organizer information.
+- **Booking Flow**: Functionality for event booking.
+- **Media Management**: Image hosting and processing via Cloudinary.
+- **Analytics**: User interaction tracking with PostHog.
+- **Visual Effects**: Responsive design featuring light ray animations.
+
+## Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router, Server Actions)
+- **Database**: [MongoDB](https://www.mongodb.com/) / [Mongoose](https://mongoosejs.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Media**: [Cloudinary](https://cloudinary.com/)
+- **Analytics**: [Posthog](https://posthog.com/)
+- **Visuals**: OGL
+
+## Technical Highlights
+
+- **Effective Caching**: Uses Next.js 16 caching features for data fetching.
+- **Database Strategy**: Implementation of a cached MongoDB connection to reduce overhead.
+- **SEO & Routing**: Semantic HTML with dynamic metadata and slug-based routing.
+- **API Routes**: API layer for event management with error handling.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-yarn install
-yarn dev
-```
+- Node.js 18+
+- MongoDB instance
+- Cloudinary & Posthog accounts
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-# Credits
+1. **Clone the repository:**
 
-Initial setup inspired by [JavaScript Mastery](https://youtu.be/I1V9YWqRIeI?si=X72XAb32_M1h0jpR).
+   ```bash
+   git clone https://github.com/hassan-arif/runtime.git
+   cd runtime
+   ```
+
+2. **Configure Environment Variables:**
+   Create a `.env` file in the root directory:
+
+   ```env
+   MONGODB_URI=your_mongodb_uri
+   CLOUDINARY_URL=your_cloudinary_url
+   NEXT_PUBLIC_POSTHOG_KEY=your_key
+   NEXT_PUBLIC_POSTHOG_HOST=your_host
+   NEXT_PUBLIC_BASE_URL=http://localhost:3000
+   ```
+
+3. **Install and Run:**
+   ```bash
+   yarn install
+   yarn dev
+   ```
+
+## Credits
+
+Initial setup inspired by [JavaScript Mastery](https://youtu.be/I1V9YWqRIeI).
